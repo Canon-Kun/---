@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name = "viewport"/>
+		<title>计算机y1802</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;/*去除网页初始装饰*/
+			}
+			/*********************************引入外部字体*******************************************/
+			@font-face {	
+				font-family: 'Amputa Bangiz2';
+				src: url('font/Amputa Bangiz2.ttf' );
+			}	
+			@font-face {
+				font-family:'mao';
+				src: url('font/mao.ttf');
+			}
+			@font-face {
+				font-family:'ye';
+				src: url('font/ye.ttf');
+			}
+			@font-face {
+				font-family:'gang';
+				src: url('font/gang.ttf');
+			}
+			@font-face{
+				font-family: 'young';
+				src: url('font/young.TTF');
+			}
+			/***********************************设置背景图片*********************/
+			body{
+				background-image: url(img/0.jpg);
+				width:100% 100%;
+			
+			}
+			/**********************设置标题************************************/
+			.header{
+				width: 100%;
+				height: 200px;
+				line-height: 200px;
+				vertical-align: center;
+				overflow: hidden;
+				
+			}
+			/*********班徽************/
+			.header>img{
+				height: 180px;
+				display: block;
+				float: left;/*图片成为块级元素*/
+				}
+				
+			/*标题斜体字*/
+			.header>span{
+				font-family: mao;
+				font-size: 80px;
+				margin-left: 100px;
+			
+			}
+			/*二级英文标题*/
+			.header1{
+				text-align: end;
+				margin-right:80px ;
+				font-family: Amputa Bangiz2;
+				font-size: 18px;
+			}
+			/*班级简介*/
+			/**********简介整体布局******/
+			.jianjie{
+				box-sizing: border-box;
+				width: 90%;
+				margin: auto;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				font-size: 20px;
+				padding: 20px;/*盒子大小包括边距*/
+			}
+			/********简介内标题设计******/
+			.jianjie p{
+				font-family: mao;
+				font-size: 50px;
+			}
+			/********后面板块的标题设计*******/
+		.detail ,.detail2{
+				font-size: 40px;
+				font-family: young;
+				text-align: center;
+				letter-spacing: 20px;
+			}
+			.detail{
+				margin-bottom:50px;
+			}
+			
+			/*导航栏内容*/
+			/****************导航栏整体布局*************************/
+			.nav{
+				width:90%;
+				height: 500px;
+				margin: auto;
+				margin-top: 80px;
+				background-color: white;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				overflow: hidden;/*防止高度坍塌*/
+			}
+			/*************导航栏内五个部分***********/
+			.content{
+				box-sizing: border-box;
+				width: 20%;
+				height: 100%;
+				float: left;/*五个导航向左浮动成一行*/
+				border: 1px solid black;
+				overflow: hidden;
+				transition: all 1s;
+				-webkit-transition:all 1s;
+			}
+			/************鼠标移入后产生的效果*********/
+			.nav:hover .content{
+				width: 10%;
+			}
+			.nav .content:hover{
+				width: 60%;
+				cursor: pointer;/*显示图标*/
+			}
+			/*分别设置5个导航栏标题后的内容*/
+			#content1,#content2,#content3,#content4,#content5{
+				background-color: lightgrey;
+				font-weight: bold;
+				color: black;
+				transition:all 1s;
+				-webkit-transition: all 1s ;
+			}
+			/************鼠标移入后的效果变化***********/
+			#content1:hover,#content3:hover,#content5:hover{
+				background-color: #87CEEB;
+				color: white;
+			}
+			#content2:hover , #content4:hover{
+				background-color: lightpink;
+				color: white;
+			}
+			/*一板块内容*/
+			/****************一板块图片****************/
+			.content11{
+				box-sizing: border-box;
+				float: left;
+				margin-top: 40px;
+				margin-left:100px ;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				padding: 0;
+				transition: all 1s;
+				-webkit-transition: all 1s ;
+				overflow: hidden;
+							}
+			/************一般块文字内容************/
+			.content12{
+				float: left;
+				margin-top: 20px;
+				margin-left: 20px;
+							}
+			/*******************具体设置文字样式*********************/
+			.content11>p{
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			/*******************鼠标移入后效果***************************/
+			.content11:hover{
+				transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+				padding: 10px;
+				
+			}
+			/*二板块内容                       同一板块*/
+			.content21{
+				box-sizing: border-box;
+				float: left;
+				margin-top: 40px;
+				margin-left:100px ;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				padding: 0;
+				transition: all 1s;
+				-webkit-transition: all 1s;
+				overflow: hidden;
+							}
+			.content22{
+				float: left;
+				margin-top: 20px;
+				margin-left: 20px;
+							}
+			.content21>p{
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.content21:hover{
+				transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);			
+				padding: 10px;
+				
+			}
+			/*三板块内容*/
+			.content31{
+				box-sizing: border-box;
+				float: left;
+				margin-top: 40px;
+				margin-left:100px ;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				padding: 0;
+				transition: all 1s;
+				-webkit-transition:all 1s;
+				overflow: hidden;
+							}
+			.content32{
+				float: left;
+				margin-top: 20px;
+				margin-left: 20px;
+							}
+			.content31>p{
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.content31:hover{
+				transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+				padding: 10px;
+			}
+			/*四板块内容*/
+			.content41{
+				box-sizing: border-box;
+				float: left;
+				margin-top: 40px;
+				margin-left:100px ;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				padding: 0;
+				transition: all 1s;
+				-webkit-transition: all 1s;
+				overflow: hidden;
+							}
+			.content42{
+				float: left;
+				margin-top: 20px;
+				margin-left: 20px;
+							}
+			.content41>p{
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.content41:hover{
+				transform: rotate(360deg);
+				-webkit-transform:rotate(360deg) ;
+				padding: 10px;
+				
+			}
+			/*第五板块*/
+			.content51{
+				box-sizing: border-box;
+				float: left;
+				margin-top: 40px;
+				margin-left:100px ;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				padding: 0;
+				transition: all 1s;
+				-webkit-transition:all 1s ;
+				overflow: hidden;
+							}
+			.content52{
+				float: left;
+				margin-top: 20px;
+				margin-left: 20px;
+							}
+			.content51>p{
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.content51:hover{
+				transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+				padding: 10px;
+			}
+			/*导航栏内标题*/
+			.nav1{
+				width: 60px;
+				height: 400px;
+				margin:100px 0 0 20px;/*字体居中*/
+				font-family: ye;
+				font-size: 30px;
+				float: left;/*左浮动*/
+			}
+			/*留言板*/
+			/************************************************************/
+			.liuyan{
+				box-sizing: border-box;
+				width: 90%;
+				height:300px;
+				padding: 0;
+				margin:auto;	
+				margin-top: 50px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				transition: all 1s;
+				-webkit-transition:all 1s;
+				cursor: pointer;
+				overflow:hidden;
+			}
+			/************鼠标移入后产生效果**************/
+			.liuyan:hover{
+				padding: 10px;
+			}
+			/*编辑留言标题*/
+			.first{
+				font-size: 50px;
+				margin-top: 20px;
+				margin-left: 20px;
+				font-weight:bold;
+				font-family: gang;
+			
+			}
+			/*编辑留言板文本框*/
+			textarea{
+				width: 100%;
+				margin: auto;
+  				height: 150px;
+  				padding: 12px 20px;
+ 				box-sizing: border-box;
+  				border: 2px solid #ccc;
+ 				border-radius: 4px;
+  				color: lightgrey;
+  				font-size: 16px;
+  				resize: none;/*不许扩展大小*/
+			}
+			/*************************留言板按钮设置*******************/
+			.button{
+				float: right;
+				margin-top: 20px;
+				margin-right: 40px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				border: 2px solid #ccc;
+				border-radius: 4px;
+			}
+			.button>a{
+				display: block;
+				box-sizing: border-box;
+				text-decoration: none;
+				color: black;
+				background-color: #CCCCCC;
+				transition: all 0.5s;
+				-webkit-transition:all 0.5s;
+				font-weight: bold;
+				padding: 5px 20px 5px 20px;
+			}
+				a:hover{
+					color: white;
+				background-color: cadetblue;
+				
+			}
+			/***********************************************************************/
+			/*底部*/
+			.bottom{
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 15px;
+				font-weight: bold;
+				color: black;
+			}
+			/**************************************************************************/
+			/*照片墙*/
+			.titlewall{
+				box-sizing: border-box;
+				text-align: center;
+				width: 1400px;
+				margin: auto;
+				padding: 80px;
+				position: relative;
+				overflow: hidden;/****防止高度坍塌*****/
+			}
+			
+			/********************/
+			.titlewall>p{
+				letter-spacing: 20px;
+				font-family: young;
+				font-size: 40px;
+				margin: auto;}
+			.titlewall img{
+				width: 260px; 
+				padding: 10px;
+				background-color: white;
+			}
+			img{
+				transition: all 0.5s;
+				-webkit-transition: all 0.5s;
+			}
+			/**************分别设置照片墙各个图片位置和鼠标移入效果*********************/
+			
+			.pic1{
+				transform: rotate(20deg);
+				-webkit-transform: rotate(20deg);
+				z-index: 1;
+			}
+			.pic1:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic2{
+				transform: rotate(-20deg);
+				-webkit-transform: rotate(-20deg);
+				z-index: 1;
+			}
+			.pic2:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic3{
+				transform: rotate(20deg);
+				-webkit-transform: rotate(20deg);
+				z-index: 1;
+			}
+			.pic3:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic4{
+				transform: rotate(-20deg);
+				-webkit-transform: rotate(-20deg);
+				z-index: 1;
+			}
+			.pic4:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic5{
+				transform: rotate(20deg);
+				-webkit-transform:rotate(20deg) ;
+				z-index: 1;
+			}
+			.pic5:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic6{
+				transform: rotate(-20deg);
+				transform: rotate(-20deg);
+				z-index: 1;
+			}
+			.pic6:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic7{
+				transform: rotate(20deg);
+				transform: rotate(20deg);
+				z-index: 1;
+			}
+			.pic7:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic8{
+				transform: rotate(-20deg);
+				transform: rotate(-20deg);
+				z-index: 1;
+			}
+			.pic8:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic9{
+				transform: rotate(20deg);
+				transform: rotate(20deg);
+				z-index: 1;
+			}
+			.pic9:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic10{
+				transform: rotate(-20deg);
+				transform: rotate(-20deg);
+				z-index: 1;
+			}
+			.pic10:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic11{
+				transform: rotate(20deg);
+				transform: rotate(20deg);
+				z-index: 1;
+			}
+			.pic11:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			.pic12{
+				transform: rotate(-20deg);
+				transform: rotate(-20deg);
+				z-index: 1;
+			}
+			.pic12:hover{
+				transform: rotate(0deg) scale(1.2);
+				-webkit-transform: rotate(0deg) scale(1.2);
+				z-index: 2;
+			}
+			/***************************我*************************************/
+			/****************************爱***********************************/
+			/******************************王*********************************/
+			/*********************************靖*******************************/
+			/***********************************锟*****************************/
+			/**************************************！************************/
+			.header2{
+				font-size: 40px;
+				letter-spacing: 10px;
+				font-weight: bold;
+				font-family: young;
+				text-align: center;
+				margin-top: 50px;
+				margin-bottom: 50px;
+			}
+			/**********设置该板块大小************/
+			.character{
+				width: 1620px;
+				margin: auto;
+				overflow: hidden;
+			}
+			/******所有图片向左浮动形成一行********/
+			.character>div{
+				width: 300px;
+				padding: 10px;
+				margin: 90px;
+				float: left;
+			}
+			.img1{
+				background-image: url(img/1.谢广平.jpg);
+				/*background-size: 100% 100%;
+				height: 400px;
+				/*transform: rotate(-10deg);*/
+				/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				transition: all 1s;*/*/
+			}
+			/********引入图片路径****并设置每个图片内容****/
+			.img2{
+				background-image: url(img/2.李胜男.jpg);
+				}
+			
+			.img3{
+				background-image: url(font/杨兴睿.jpg);
+			}
+			.img4{
+				background-image: url(img/4.邓泽.jpg);
+			}
+			.img5{
+				background-image: url(img/5.王靖锟.jpg);
+			}
+			.img6{
+				background-image: url(img/6.袁雅阁.jpg);
+			}
+			.img7{
+				background-image: url(img/李锐.jpg);
+			}
+			.img8{
+				background-image: url(img/卢.jpg);
+			}
+			.img9{
+				background-image: url(img/雷.jpg);
+			}
+			/********背景图片大小填满div****/
+			.img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8,.img9{
+				background-size: 100% 100%;
+				height: 400px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				transition: all 1s;
+			}
+			
+			/**************设置每部分内容大小格式***************/
+			.character>div>div{
+				width: 50%;
+				height: 200px;
+				padding: 50px;
+				margin: auto;
+				margin-top: 50px;
+				margin-bottom: 50px;
+				background-color:  #ffffff;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				color: #000000;
+				opacity: 0.6;
+				visibility: hidden;
+				transition: all 1s;
+				text-align: center;
+				font-family: young;
+				font-size: 18px;
+				font-weight: bold;
+				overflow: hidden;
+			}
+			
+				/***************鼠标移入后产生效果****************/
+			.character>div:hover
+			{
+				transform: rotateY(360deg);
+				-webkit-transform: rotateY(360deg);
+				-moz-transform: rotateY(360deg);
+			}
+			
+			.img1:hover .part1 , .img2:hover .part2 , .img3:hover .part3 , .img4:hover .part4 , .img5:hover .part5 , .img6:hover .part6 , .img7:hover .part7 , .img8:hover .part8 , .img9:hover .part9
+			{
+				visibility: visible;
+				color: black;
+				transition: all 1s;
+			} 
+			/******************************************/
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<img src="img/图片1.png" />
+			<span>天行健 君子以自强不息</span>
+			<br />
+		</div>
+		<div class="header1">WHUT Computer Science</div>
+		<div class="detail">班级简介</div>
+		<div class="jianjie">
+			<p>计算机余区二班</p>
+			不久前，满脸潮红的我们带着行李迈进理工大;<br />
+			不久前，身姿活力的我们领着各种招新单子行走在校园;<br />
+			不久前，五湖四海的我们穿着同样的迷彩站在场地。一切就这样理所应当，情真意切。<br />
+			我们相聚在余区二班，在无数次沉默在试卷之后，在千万次呓语在梦里憧憬后——如此珍贵，如此难得。<br />
+			我们相识于余区二班，拽着渐渐成熟的生命中不移的梦想，怀着敢闯敢拼的青春里倔强的执着——如此坚定，如此同心。<br />
+		</div>
+		
+		<div class="header2">风采人物</div>
+		<div class="character">
+			<div class="img1">
+				<div class="part1">
+					前锋：谢广平<br />
+					身先士卒任劳任怨<br />
+					挑起管理班级的重任<br />
+					指引同学前行的方向<br />
+					带领班级取得成功<br />
+				</div>
+			</div>
+			<div class="img2">
+				<div class="part2">
+					射手：李胜男<br />
+					莫遣只轮归海窟<br />
+					仍留一箭射天山<br />
+					凝心聚力促繁荣<br />
+					以团支书之名为班助力<br />
+				</div>
+			</div>
+			<div class="img3">
+				<div class="part3">
+					毅力max:杨兴睿<br />
+					要知松高洁<br />
+					待到雪化时<br />
+					以坚韧不拔之志<br />
+					攀绚丽人生之峰<br />
+				</div>
+			</div>
+			<div class="img4">
+				<div class="part4">
+					学霸：邓泽<br />
+					长风破浪会有时<br />
+					直挂云帆济沧海<br />
+					脚踏实地，努力求学<br />
+					勤奋不缀，学习楷模<br />
+				</div>
+			</div>
+			<div class="img5">
+				<div class="part5">
+					书迷：王靖锟<br />
+					书卷多情似故人<br />
+					晨昏忧乐每相亲<br />
+					在阅读的世界里肆意遨游<br />
+					在创作的道路上不断前行<br />
+				</div>
+			</div>
+			<div class="img6">
+				<div class="part6">
+				运动达人: 袁雅阁<br />
+				少年骑马入咸阳<br />
+				鹘似身轻蝶似狂<br />
+				篮球场边万人看<br />  
+				秋千旗下一春忙</div>
+			</div>
+			<div class="img7">
+				<div class="part7">
+					一位不愿透露姓名的同学<br />
+					生活是场旅行，好坏皆风景<br />
+					保持内心温暖，坚定前行脚步<br />
+					或许偶尔颓废，也许我只是累了<br />
+				</div>
+			</div>
+			<div class="img8">
+				<div class="part8">
+					战士：卢紫良<br />
+					千磨万击还坚劲<br />
+					任尔东西南北风 <br />
+					用心帮扶每一个落后的学生<br />
+					冲锋在备考的第一线<br />
+				</div>
+			</div>
+			<div class="img9">
+				<div class="part9">
+					清风:雷胜男<br />
+					北方有佳人<br />
+					绝世而独立<br />
+					雅态芳姿闲淑<br />
+					雪映钿装金斛<br />
+				</div>
+			</div>
+		</div>
+		<div class="detail2">班级建设</div>
+		<div class="nav">
+			<div class="content" id="content1">
+				<div class="nav1">
+					<p>学</p><br />
+					<p>风</p><br />
+					<p>建</p><br />
+					<p>设</p><br />
+				</div>
+				
+				<div class="content11">
+						<img src="img/图片4.png" />
+						<p>自习室一角</p>
+				</div>
+				<div class="content12">
+					在班长和学习委员的带领下，计算机类y1802班稳抓学风建设，督促和帮助同学们更好的学习。<br />
+					组织同学们进行晚自习统一学习，试卷讲解，考试分析来帮助同学们掌握所学知识。<br />
+					此外，学习委员还在考试前精心准备学习资料，最终，y1802班在学期末考核中名列年级前茅。<br />
+				</div>
+				
+			</div>
+			<div class="content" id="content2">
+				<div class="nav1">
+					<p>文</p><br />
+					<p>化</p><br />
+					<p>建</p><br />
+					<p>设</p><br />
+				</div>
+				<div>
+					<div class="content21">
+						<img src="img/图片2.png" />
+						<p>读书分享会</p>
+					</div>
+					<div class="content22">
+						在抓好学习的同时，计算机类y1802班班委还积极组织文化活动来丰富同学们的精神世界。<br />
+						 如"遇见更好的自己"心理主题班会，读书分享会等。<br />
+						 让同学们在活动中畅所欲言，在交流中获得心灵上的提升。<br />
+					</div>
+				</div>
+			</div>
+			<div class="content" id="content3">
+				<div class="nav1">
+					<p>团</p><br />
+					<p>支</p><br />
+					<p>部</p><br />
+					<p>建</p><br />
+					<p>设</p><br />
+				</div>
+				<div>
+					<div class="content31">
+						<img src="img/default.jpeg" />
+						<p>参观辛亥革纪念馆</p>
+					</div>
+					<div class="content32">
+						为了庆祝中华人民共和国成立70周年，纪念五四运动100周年<br />
+						计算机类y1802和y1807团支部联合组织开展了“青春心向党，建功新时代”特别主题团日活动<br />
+						在活动上，两名优秀的共青团员代表围绕在新时代继承和弘扬五四精神，进行了一场团旗下的演讲<br />
+						之后，我们又一起重温了入团誓词，唱响了“光荣啊 !中国共青团”<br />
+						每一名团员都在这庄严肃穆的仪式中接受了“沉浸式”的精神洗礼，誓要将五四精神发扬光大<br />
+					</div>
+				</div>
+			</div>
+			<div class="content" id="content4">
+				<div class="nav1">
+					<p>社</p><br />
+					<p>会</p><br />
+					<p>实</p><br />
+					<p>践</p><br />
+				</div>
+				<div>
+					<div class="content41">
+						<img src="img/团建.png" />
+						<p>参观辛亥革命纪念馆</p>
+					</div>
+					<div class="content42">
+						“观革命先烈，瞻红色风姿”，计科y1802团支部一起去追寻改革开放的足迹<br />
+						时光流逝，尽管已经一个世纪过去，回眸辛亥革命，我们会发现<br />
+						那一段浴血奋战的历史留给我们的，绝不仅仅是推翻了一个如迟暮老人般的清王朝那般单薄<br/>
+						我们需铭记历史，继承党的光荣传统，承担起我们的历史责任<br />
+						把红色教育落实到每一次的社会实践中<br />
+					</div>
+				</div>
+			</div>
+			<div class="content" id="content5">
+				<div class="nav1">
+					<p>志</p><br />
+					<p>愿</p><br />
+					<p>服</p><br />
+					<p>务</p><br />
+				</div>
+				<div>
+					<div class="content51">
+						<img src="img/图片7.png" />
+						<p>春苗小学</p>
+					</div>
+					<div class="content52">
+						伴随着“3.5学雷锋志愿服务文化月”的到来，计算机类y1802的志愿者们走进了武汉市春苗学校<br />
+						这一次，我们走进了六年二班的课堂<br />
+						看到他们一张张稚嫩的脸庞，仿佛看到了他们对未来的憧憬与向往。<br/>
+						在讲台上，我们开展了你来比划我来猜、知识竞答等一系列游戏<br/>
+						最后，我们以一首《最初的梦想》结束了此次志愿活动。温暖有你快乐出发，志愿服务永不停歇<br />
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="photowall">
+			<div class="titlewall">
+				<p>照片墙</p><br /><br />
+				<img class="pic1" src="img/风采大赛.jpg">
+				<img class="pic2" src="img/风采2.png">
+				<img class="pic3" src="img/风采3.png">
+				<img class="pic4" src="img/风采4.png">
+				<img class="pic5" src="img/风采5.png">
+				<img class="pic6" src="img/风采6.png">
+				<img class="pic7" src="img/图片9.png">
+				<img class="pic8" src="img/图片8.png">
+				<img class="pic9" src="img/QQ图片20190510151913.jpg" >
+				<img class="pic10" src="img/QQ图片20190510151933.jpg" >
+				<img class="pic11" src="img/QQ图片20190510151944.jpg" />
+				<img class="pic12" src="img/QQ图片20190510151954.jpg" />
+			</div>
+		</div>
+		<div class="liuyan">
+				<div class="first">留言板</div>
+				<form>
+  					<textarea>你想对ta说....</textarea>
+				</form>
+				<div class="button"><a href="#">确认</a></div>
+		</div>
+		
+		<div class="bottom">	
+			©武汉理工大学计算机科学与技术学院y1802班
+			<p>鸣谢：</p>
+			<p>文案：张亮  牟兰</p>
+			<p>短工：王靖锟</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登陆界面</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+			body{
+				background-position-y: 50px;
+				background-image: url(img/timg.png);
+				background-size: 100% ;/*背景图片设置*/
+			}
+			.title{
+				
+				position: absolute;
+				top: 180px;
+				left: 350px;/* 文字定位*/
+				font-size: 30px;
+				;
+				
+			}
+			
+			span{
+				display: block;
+			}
+			.message{
+				transform: rotate(-30deg);
+			}
+			.message1{
+				transform: rotate(30deg);
+			}
+			.title1{
+				/* background-color: aqua; */
+				position: absolute;
+				top: 80px;
+				left: 880px;/*设置位置*/
+				font-size: 25px;
+				
+			}
+			.position{
+				position: relative;
+				width: 450px;
+				height: 10px;/*防止按钮换行*/
+			}/*方便按钮定位*/
+			
+			.button{
+				position: absolute;
+				top: 120px;
+				left: 200px;/*按钮定位*/
+				
+			}
+			a{
+				display: inline-block;
+				position: relative;
+				text-decoration: none;
+				background-color: #F0F0F0;
+				padding:30px
+				color:white;
+				
+				border-radius: 0;/*设置圆角*/
+				transition: all 1s;/*过度回来时的时间*/
+			}
+			a:hover{
+				padding: 25px;
+				background-color: skyblue;
+				border-radius: 10px;
+				color: white;
+				font-weight: bold;
+				transform: rotate(360deg);/*旋转风格*/
+				transition: padding 1s , background-color 1s , border-radius 1s , color 1s ,font-weight 1s ,transform 1s;
+					/*正向过渡时间*/
+			}
+	
+		</style>
+	</head>
+	<body>
+		<div class="title">
+			<span class="message1">余家头男子职业学院</span>
+			<br />
+			<br />
+			<br />
+			<br />
+			<span class="message">少年？不了解一下吗？</span>
+			</div>
+		<div class="title1">
+			<p><i>计算机y1802的神秘世界</i></p>
+			<p class="position"></p>
+			<div class="button">
+				<a href="主界面.html">>>上车看看>></a>
+			</div>
+		</div>
+	</body>
+</html>
